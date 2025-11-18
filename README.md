@@ -2,7 +2,7 @@
 
 Minimal example on how to setup a QFileSystemWatcher to enable live coding in QML
 
-[](./docs/example.webm)
+![example](./docs/example.mp4)
 
 ## build
 
