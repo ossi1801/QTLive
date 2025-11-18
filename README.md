@@ -2,7 +2,7 @@
 
 Minimal example on how to setup a QFileSystemWatcher to enable live coding in QML
 
-* Original [LiveCoding](https://github.com/m4uro/LiveCoding)
+[](./docs/example.webm)
 
 ## build
 
@@ -12,3 +12,6 @@ Minimal example on how to setup a QFileSystemWatcher to enable live coding in QM
 * Compile: ```cmake --build build --config Release```
 
 * Run: ```./build/QtLive``` 
+
+### Credits 
+* Original [LiveCoding](https://github.com/m4uro/LiveCoding)
