@@ -1,5 +1,5 @@
 CMakeFiles/QTLive.dir/src/main.cpp.o: \
- /home/ossipc/projects/qt_projects/qt_live/LiveCoding/src/main.cpp \
+ /home/ossipc/projects/qt_projects/qt_live/src/main.cpp \
  /usr/include/stdc-predef.h /usr/include/qt6/QtGui/QGuiApplication \
  /usr/include/qt6/QtGui/qguiapplication.h \
  /usr/include/qt6/QtGui/qtguiglobal.h /usr/include/qt6/QtCore/qglobal.h \
@@ -383,7 +383,7 @@ CMakeFiles/QTLive.dir/src/main.cpp.o: \
  /usr/include/qt6/QtCore/qtimezone.h \
  /usr/include/qt6/QtQml/qjsmanagedvalue.h \
  /usr/include/qt6/QtQml/qqmlabstracturlinterceptor.h \
- /home/ossipc/projects/qt_projects/qt_live/LiveCoding/src/filewatcher.h \
+ /home/ossipc/projects/qt_projects/qt_live/src/filewatcher.h \
  /usr/include/qt6/QtCore/QFileSystemWatcher \
  /usr/include/qt6/QtCore/qfilesystemwatcher.h \
  /usr/include/qt6/QtCore/QObject /usr/include/qt6/QtCore/QDir \

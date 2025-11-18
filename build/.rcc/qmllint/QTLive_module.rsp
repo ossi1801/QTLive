@@ -1,0 +1,8 @@
+-I
+/home/ossipc/projects/qt_projects/qt_live/build
+-I
+/usr/lib64/qt6/qml
+--resource
+/home/ossipc/projects/qt_projects/qt_live/build/.qt/rcc/qmake_QMLLive.qrc
+--module
+QMLLive

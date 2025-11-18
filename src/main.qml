@@ -1,12 +1,12 @@
-import QtQuick
-Rectangle {
+import QtQuick as QQ
+QQ.Rectangle {
     anchors.fill: parent
 	color: "black"
-    Text {
+    QQ.Text {
         text: "Hello World!"
         font.family: "Helvetica"
         font.pointSize: 24
-        color: "red"
+        color: "green"
     }
 
 }

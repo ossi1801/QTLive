@@ -1,5 +1,5 @@
-/home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/QTLive_autogen/UVLADIE3JM/moc_filewatcher.cpp: /home/ossipc/projects/qt_projects/qt_live/LiveCoding/src/filewatcher.h \
-  /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/QTLive_autogen/moc_predefs.h \
+/home/ossipc/projects/qt_projects/qt_live/build/QTLive_autogen/UVLADIE3JM/moc_filewatcher.cpp: /home/ossipc/projects/qt_projects/qt_live/src/filewatcher.h \
+  /home/ossipc/projects/qt_projects/qt_live/build/QTLive_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \

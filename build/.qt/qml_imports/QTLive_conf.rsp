@@ -1,9 +1,13 @@
 -rootPath
-/home/ossipc/projects/qt_projects/qt_live/LiveCoding
+/home/ossipc/projects/qt_projects/qt_live
 -cmake-output
 -output-file
-/home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/.qt/qml_imports/QTLive_conf.cmake
+/home/ossipc/projects/qt_projects/qt_live/build/.qt/qml_imports/QTLive_conf.cmake
 -importPath
-/home/ossipc/projects/qt_projects/qt_live/LiveCoding/build
+/home/ossipc/projects/qt_projects/qt_live/build/QMLLive
+-importPath
+/home/ossipc/projects/qt_projects/qt_live/build
 -importPath
 /usr/lib64/qt6/qml
+-qrcFiles
+/home/ossipc/projects/qt_projects/qt_live/build/.qt/rcc/qmake_QMLLive.qrc

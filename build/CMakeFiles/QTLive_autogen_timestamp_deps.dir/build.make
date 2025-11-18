@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ossipc/projects/qt_projects/qt_live/LiveCoding
+CMAKE_SOURCE_DIR = /home/ossipc/projects/qt_projects/qt_live
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build
+CMAKE_BINARY_DIR = /home/ossipc/projects/qt_projects/qt_live/build
 
 # Utility rule file for QTLive_autogen_timestamp_deps.
 
@@ -81,6 +81,6 @@ CMakeFiles/QTLive_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/QTLive_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/QTLive_autogen_timestamp_deps.dir/depend:
-	cd /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ossipc/projects/qt_projects/qt_live/LiveCoding /home/ossipc/projects/qt_projects/qt_live/LiveCoding /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/CMakeFiles/QTLive_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/ossipc/projects/qt_projects/qt_live/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ossipc/projects/qt_projects/qt_live /home/ossipc/projects/qt_projects/qt_live /home/ossipc/projects/qt_projects/qt_live/build /home/ossipc/projects/qt_projects/qt_live/build /home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles/QTLive_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/QTLive_autogen_timestamp_deps.dir/depend
 

@@ -5,6 +5,8 @@ QTLive: \
   CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.o \
   CMakeFiles/QTLive.dir/src/filewatcher.cpp.o \
   CMakeFiles/QTLive.dir/src/main.cpp.o \
+  CMakeFiles/QTLive.dir/qtlive_qmltyperegistrations.cpp.o \
+  CMakeFiles/QTLive.dir/build/.qt/rcc/qrc_qmake_QMLLive.cpp.o \
   CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.o \
   /usr/lib64/libQt6Quick.so.6.9.3 \
   /usr/lib64/libQt6QmlMeta.so.6.9.3 \
@@ -115,6 +117,10 @@ CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.o:
 CMakeFiles/QTLive.dir/src/filewatcher.cpp.o:
 
 CMakeFiles/QTLive.dir/src/main.cpp.o:
+
+CMakeFiles/QTLive.dir/qtlive_qmltyperegistrations.cpp.o:
+
+CMakeFiles/QTLive.dir/build/.qt/rcc/qrc_qmake_QMLLive.cpp.o:
 
 CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.o:
 

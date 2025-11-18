@@ -1,4 +1,4 @@
-# Install script for directory: /home/ossipc/projects/qt_projects/qt_live/LiveCoding
+# Install script for directory: /home/ossipc/projects/qt_projects/qt_live
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,7 +49,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/QTLive"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/QTLive")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/ossipc/projects/qt_projects/qt_live/build/QTLive")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/QTLive" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/QTLive")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -61,7 +61,7 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/install_local_manifest.txt"
+  file(WRITE "/home/ossipc/projects/qt_projects/qt_live/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -77,6 +77,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/ossipc/projects/qt_projects/qt_live/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

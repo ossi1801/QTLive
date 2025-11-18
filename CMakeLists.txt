@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.19)
 
 project(QTLive VERSION 1.0 LANGUAGES CXX)
 
@@ -26,9 +26,10 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Quick LinguistTools)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "") #json 
-
+set(QT_QML_GENERATE_QMLLS_INI ON CACHE INTERNAL "") # for neovim lsp
 # Source directory.
 set(SRC_DIR ${CMAKE_SOURCE_DIR}/src)
+
 
 # Use globbing to recursively collect all source, header, and resource files from src/.
 file(GLOB_RECURSE SRC_FILES
@@ -48,18 +49,19 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
     )
     qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
-else()
-    if(ANDROID)
-        add_library(${PROJECT_NAME} SHARED
-            ${PROJECT_SOURCES}
-        )
-    else()
-        add_executable(${PROJECT_NAME}
-            ${PROJECT_SOURCES}
-        )
-    endif()
-    qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 endif()
+    #else()
+	#    if(ANDROID)
+	#        add_library(${PROJECT_NAME} SHARED
+	#            ${PROJECT_SOURCES}
+	#        )
+	#    else()
+	#        add_executable(${PROJECT_NAME}
+	#            ${PROJECT_SOURCES}
+	#        )
+	#    endif()
+	#    qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
+	#endif()
 
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Quick)
 #target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
@@ -83,6 +85,14 @@ install(TARGETS ${PROJECT_NAME}
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
+
+#Is this neeed?
+file(GLOB QML_FILES "${CMAKE_SOURCE_DIR}/*.qml")
+qt_add_qml_module(${PROJECT_NAME}
+    URI QMLLive
+    QML_FILES ${QML_FILES}
+)
+
 
 
 if(QT_VERSION_MAJOR EQUAL 6)

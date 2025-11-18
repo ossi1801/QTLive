@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ossipc/projects/qt_projects/qt_live/LiveCoding
+CMAKE_SOURCE_DIR = /home/ossipc/projects/qt_projects/qt_live
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build
+CMAKE_BINARY_DIR = /home/ossipc/projects/qt_projects/qt_live/build
 
 # Utility rule file for QTLive_autogen.
 
@@ -70,9 +70,9 @@ CMakeFiles/QTLive_autogen: QTLive_autogen/timestamp
 
 QTLive_autogen/timestamp: /usr/lib64/qt6/libexec/moc
 QTLive_autogen/timestamp: CMakeFiles/QTLive_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target QTLive"
-	/usr/bin/cmake -E cmake_autogen /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/CMakeFiles/QTLive_autogen.dir/AutogenInfo.json Release
-	/usr/bin/cmake -E touch /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/QTLive_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target QTLive"
+	/usr/bin/cmake -E cmake_autogen /home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles/QTLive_autogen.dir/AutogenInfo.json Release
+	/usr/bin/cmake -E touch /home/ossipc/projects/qt_projects/qt_live/build/QTLive_autogen/timestamp
 
 CMakeFiles/QTLive_autogen.dir/codegen:
 .PHONY : CMakeFiles/QTLive_autogen.dir/codegen
@@ -91,6 +91,6 @@ CMakeFiles/QTLive_autogen.dir/clean:
 .PHONY : CMakeFiles/QTLive_autogen.dir/clean
 
 CMakeFiles/QTLive_autogen.dir/depend:
-	cd /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ossipc/projects/qt_projects/qt_live/LiveCoding /home/ossipc/projects/qt_projects/qt_live/LiveCoding /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/CMakeFiles/QTLive_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/ossipc/projects/qt_projects/qt_live/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ossipc/projects/qt_projects/qt_live /home/ossipc/projects/qt_projects/qt_live /home/ossipc/projects/qt_projects/qt_live/build /home/ossipc/projects/qt_projects/qt_live/build /home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles/QTLive_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/QTLive_autogen.dir/depend
 

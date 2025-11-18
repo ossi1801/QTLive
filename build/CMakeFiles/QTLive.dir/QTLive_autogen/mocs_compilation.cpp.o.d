@@ -1,8 +1,8 @@
 CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.o: \
- /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/QTLive_autogen/mocs_compilation.cpp \
+ /home/ossipc/projects/qt_projects/qt_live/build/QTLive_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/QTLive_autogen/UVLADIE3JM/moc_filewatcher.cpp \
- /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/QTLive_autogen/UVLADIE3JM/../../../src/filewatcher.h \
+ /home/ossipc/projects/qt_projects/qt_live/build/QTLive_autogen/UVLADIE3JM/moc_filewatcher.cpp \
+ /home/ossipc/projects/qt_projects/qt_live/build/QTLive_autogen/UVLADIE3JM/../../../src/filewatcher.h \
  /usr/include/c++/15/functional \
  /usr/include/c++/15/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \

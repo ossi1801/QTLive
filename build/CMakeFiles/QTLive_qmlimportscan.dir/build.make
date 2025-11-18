@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ossipc/projects/qt_projects/qt_live/LiveCoding
+CMAKE_SOURCE_DIR = /home/ossipc/projects/qt_projects/qt_live
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build
+CMAKE_BINARY_DIR = /home/ossipc/projects/qt_projects/qt_live/build
 
 # Utility rule file for QTLive_qmlimportscan.
 
@@ -69,8 +69,9 @@ include CMakeFiles/QTLive_qmlimportscan.dir/progress.make
 CMakeFiles/QTLive_qmlimportscan: .qt/qml_imports/QTLive_build.cmake
 
 .qt/qml_imports/QTLive_build.cmake: /usr/lib64/qt6/libexec/qmlimportscanner
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running qmlimportscanner for QTLive"
-	cd /home/ossipc/projects/qt_projects/qt_live/LiveCoding && /usr/lib64/qt6/libexec/qmlimportscanner @/home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/.qt/qml_imports/QTLive_build.rsp
+.qt/qml_imports/QTLive_build.cmake: .qt/rcc/qmake_QMLLive.qrc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running qmlimportscanner for QTLive"
+	cd /home/ossipc/projects/qt_projects/qt_live && /usr/lib64/qt6/libexec/qmlimportscanner @/home/ossipc/projects/qt_projects/qt_live/build/.qt/qml_imports/QTLive_build.rsp
 
 CMakeFiles/QTLive_qmlimportscan.dir/codegen:
 .PHONY : CMakeFiles/QTLive_qmlimportscan.dir/codegen
@@ -89,6 +90,6 @@ CMakeFiles/QTLive_qmlimportscan.dir/clean:
 .PHONY : CMakeFiles/QTLive_qmlimportscan.dir/clean
 
 CMakeFiles/QTLive_qmlimportscan.dir/depend:
-	cd /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ossipc/projects/qt_projects/qt_live/LiveCoding /home/ossipc/projects/qt_projects/qt_live/LiveCoding /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/CMakeFiles/QTLive_qmlimportscan.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/ossipc/projects/qt_projects/qt_live/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ossipc/projects/qt_projects/qt_live /home/ossipc/projects/qt_projects/qt_live /home/ossipc/projects/qt_projects/qt_live/build /home/ossipc/projects/qt_projects/qt_live/build /home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles/QTLive_qmlimportscan.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/QTLive_qmlimportscan.dir/depend
 

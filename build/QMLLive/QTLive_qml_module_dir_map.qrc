@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="/QMLLive">/home/ossipc/projects/qt_projects/qt_live/build/QMLLive</file>
+
+  </qresource>
+</RCC>

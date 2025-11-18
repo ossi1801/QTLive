@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ossipc/projects/qt_projects/qt_live/LiveCoding
+CMAKE_SOURCE_DIR = /home/ossipc/projects/qt_projects/qt_live
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build
+CMAKE_BINARY_DIR = /home/ossipc/projects/qt_projects/qt_live/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/QTLive.dir/depend.make
@@ -69,19 +69,54 @@ include CMakeFiles/QTLive.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/QTLive.dir/flags.make
 
-QTLive_autogen/timestamp: /usr/lib64/qt6/libexec/moc
-QTLive_autogen/timestamp: CMakeFiles/QTLive.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target QTLive"
-	/usr/bin/cmake -E cmake_autogen /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/CMakeFiles/QTLive_autogen.dir/AutogenInfo.json Release
-	/usr/bin/cmake -E touch /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/QTLive_autogen/timestamp
+meta_types/qt6qtlive_release_metatypes.json.gen: /usr/lib64/qt6/libexec/moc
+meta_types/qt6qtlive_release_metatypes.json.gen: meta_types/QTLive_json_file_list.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running moc --collect-json for target QTLive"
+	/usr/lib64/qt6/libexec/moc -o /home/ossipc/projects/qt_projects/qt_live/build/meta_types/qt6qtlive_release_metatypes.json.gen --collect-json @/home/ossipc/projects/qt_projects/qt_live/build/meta_types/QTLive_json_file_list.txt
+	/usr/bin/cmake -E copy_if_different /home/ossipc/projects/qt_projects/qt_live/build/meta_types/qt6qtlive_release_metatypes.json.gen /home/ossipc/projects/qt_projects/qt_live/build/meta_types/qt6qtlive_release_metatypes.json
 
-QTLive_autogen/UVLADIE3JM/qrc_qml.cpp: /home/ossipc/projects/qt_projects/qt_live/LiveCoding/src/qml.qrc
+qtlive_qmltyperegistrations.cpp: qmltypes/QTLive_foreign_types.txt
+qtlive_qmltyperegistrations.cpp: meta_types/qt6qtlive_release_metatypes.json
+qtlive_qmltyperegistrations.cpp: /usr/lib64/qt6/libexec/qmltyperegistrar
+qtlive_qmltyperegistrations.cpp: /usr/lib64/qt6/metatypes/qt6core_relwithdebinfo_metatypes.json
+qtlive_qmltyperegistrations.cpp: /usr/lib64/qt6/metatypes/qt6quick_relwithdebinfo_metatypes.json
+qtlive_qmltyperegistrations.cpp: /usr/lib64/qt6/metatypes/qt6gui_relwithdebinfo_metatypes.json
+qtlive_qmltyperegistrations.cpp: /usr/lib64/qt6/metatypes/qt6qml_relwithdebinfo_metatypes.json
+qtlive_qmltyperegistrations.cpp: /usr/lib64/qt6/metatypes/qt6network_relwithdebinfo_metatypes.json
+qtlive_qmltyperegistrations.cpp: /usr/lib64/qt6/metatypes/qt6qmlmeta_relwithdebinfo_metatypes.json
+qtlive_qmltyperegistrations.cpp: /usr/lib64/qt6/metatypes/qt6qmlmodels_relwithdebinfo_metatypes.json
+qtlive_qmltyperegistrations.cpp: /usr/lib64/qt6/metatypes/qt6qmlworkerscript_relwithdebinfo_metatypes.json
+qtlive_qmltyperegistrations.cpp: /usr/lib64/qt6/metatypes/qt6opengl_relwithdebinfo_metatypes.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Automatic QML type registration for target QTLive"
+	/usr/lib64/qt6/libexec/qmltyperegistrar --generate-qmltypes=/home/ossipc/projects/qt_projects/qt_live/build/QMLLive/QTLive.qmltypes --import-name=QMLLive --major-version=254 --minor-version=254 @/home/ossipc/projects/qt_projects/qt_live/build/qmltypes/QTLive_foreign_types.txt -o /home/ossipc/projects/qt_projects/qt_live/build/qtlive_qmltyperegistrations.cpp /home/ossipc/projects/qt_projects/qt_live/build/meta_types/qt6qtlive_release_metatypes.json
+	/usr/bin/cmake -E make_directory /home/ossipc/projects/qt_projects/qt_live/build/.qt/qmltypes
+	/usr/bin/cmake -E touch /home/ossipc/projects/qt_projects/qt_live/build/.qt/qmltypes/QTLive.qmltypes
+
+QMLLive/QTLive.qmltypes: qtlive_qmltyperegistrations.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate QMLLive/QTLive.qmltypes
+
+.qt/rcc/qrc_qmake_QMLLive.cpp: QMLLive/qmldir
+.qt/rcc/qrc_qmake_QMLLive.cpp: .qt/rcc/qmake_QMLLive.qrc
+.qt/rcc/qrc_qmake_QMLLive.cpp: /usr/lib64/qt6/libexec/rcc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Running rcc for resource qmake_QMLLive"
+	/usr/lib64/qt6/libexec/rcc --output /home/ossipc/projects/qt_projects/qt_live/build/.qt/rcc/qrc_qmake_QMLLive.cpp --name qmake_QMLLive /home/ossipc/projects/qt_projects/qt_live/build/.qt/rcc/qmake_QMLLive.qrc
+
+QTLive_autogen/UVLADIE3JM/qrc_qml.cpp: /home/ossipc/projects/qt_projects/qt_live/src/qml.qrc
 QTLive_autogen/UVLADIE3JM/qrc_qml.cpp: CMakeFiles/QTLive_autogen.dir/AutoRcc_qml_UVLADIE3JM_Info.json
-QTLive_autogen/UVLADIE3JM/qrc_qml.cpp: /home/ossipc/projects/qt_projects/qt_live/LiveCoding/src/main.qml
+QTLive_autogen/UVLADIE3JM/qrc_qml.cpp: /home/ossipc/projects/qt_projects/qt_live/src/main.qml
 QTLive_autogen/UVLADIE3JM/qrc_qml.cpp: /usr/lib64/qt6/libexec/rcc
 QTLive_autogen/UVLADIE3JM/qrc_qml.cpp: /usr/lib64/qt6/libexec/rcc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Automatic RCC for src/qml.qrc"
-	/usr/bin/cmake -E cmake_autorcc /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/CMakeFiles/QTLive_autogen.dir/AutoRcc_qml_UVLADIE3JM_Info.json Release
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Automatic RCC for src/qml.qrc"
+	/usr/bin/cmake -E cmake_autorcc /home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles/QTLive_autogen.dir/AutoRcc_qml_UVLADIE3JM_Info.json Release
+
+meta_types/QTLive_json_file_list.txt: /usr/lib64/qt6/libexec/cmake_automoc_parser
+meta_types/QTLive_json_file_list.txt: QTLive_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Running AUTOMOC file extraction for target QTLive"
+	/usr/lib64/qt6/libexec/cmake_automoc_parser --cmake-autogen-cache-file /home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles/QTLive_autogen.dir/ParseCache.txt --cmake-autogen-info-file /home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles/QTLive_autogen.dir/AutogenInfo.json --output-file-path /home/ossipc/projects/qt_projects/qt_live/build/meta_types/QTLive_json_file_list.txt --timestamp-file-path /home/ossipc/projects/qt_projects/qt_live/build/meta_types/QTLive_json_file_list.txt.timestamp --cmake-autogen-include-dir-path /home/ossipc/projects/qt_projects/qt_live/build/QTLive_autogen/include
+
+meta_types/qt6qtlive_release_metatypes.json: meta_types/qt6qtlive_release_metatypes.json.gen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating meta_types/qt6qtlive_release_metatypes.json"
+	/usr/bin/cmake -E true
 
 CMakeFiles/QTLive.dir/codegen:
 .PHONY : CMakeFiles/QTLive.dir/codegen
@@ -89,64 +124,94 @@ CMakeFiles/QTLive.dir/codegen:
 CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.o: CMakeFiles/QTLive.dir/flags.make
 CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.o: QTLive_autogen/mocs_compilation.cpp
 CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.o: CMakeFiles/QTLive.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.o -MF CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.o -c /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/QTLive_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.o -MF CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.o -c /home/ossipc/projects/qt_projects/qt_live/build/QTLive_autogen/mocs_compilation.cpp
 
 CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/QTLive_autogen/mocs_compilation.cpp > CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ossipc/projects/qt_projects/qt_live/build/QTLive_autogen/mocs_compilation.cpp > CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/QTLive_autogen/mocs_compilation.cpp -o CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ossipc/projects/qt_projects/qt_live/build/QTLive_autogen/mocs_compilation.cpp -o CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/QTLive.dir/src/filewatcher.cpp.o: CMakeFiles/QTLive.dir/flags.make
-CMakeFiles/QTLive.dir/src/filewatcher.cpp.o: /home/ossipc/projects/qt_projects/qt_live/LiveCoding/src/filewatcher.cpp
+CMakeFiles/QTLive.dir/src/filewatcher.cpp.o: /home/ossipc/projects/qt_projects/qt_live/src/filewatcher.cpp
 CMakeFiles/QTLive.dir/src/filewatcher.cpp.o: CMakeFiles/QTLive.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/QTLive.dir/src/filewatcher.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTLive.dir/src/filewatcher.cpp.o -MF CMakeFiles/QTLive.dir/src/filewatcher.cpp.o.d -o CMakeFiles/QTLive.dir/src/filewatcher.cpp.o -c /home/ossipc/projects/qt_projects/qt_live/LiveCoding/src/filewatcher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/QTLive.dir/src/filewatcher.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTLive.dir/src/filewatcher.cpp.o -MF CMakeFiles/QTLive.dir/src/filewatcher.cpp.o.d -o CMakeFiles/QTLive.dir/src/filewatcher.cpp.o -c /home/ossipc/projects/qt_projects/qt_live/src/filewatcher.cpp
 
 CMakeFiles/QTLive.dir/src/filewatcher.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/QTLive.dir/src/filewatcher.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ossipc/projects/qt_projects/qt_live/LiveCoding/src/filewatcher.cpp > CMakeFiles/QTLive.dir/src/filewatcher.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ossipc/projects/qt_projects/qt_live/src/filewatcher.cpp > CMakeFiles/QTLive.dir/src/filewatcher.cpp.i
 
 CMakeFiles/QTLive.dir/src/filewatcher.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QTLive.dir/src/filewatcher.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ossipc/projects/qt_projects/qt_live/LiveCoding/src/filewatcher.cpp -o CMakeFiles/QTLive.dir/src/filewatcher.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ossipc/projects/qt_projects/qt_live/src/filewatcher.cpp -o CMakeFiles/QTLive.dir/src/filewatcher.cpp.s
 
 CMakeFiles/QTLive.dir/src/main.cpp.o: CMakeFiles/QTLive.dir/flags.make
-CMakeFiles/QTLive.dir/src/main.cpp.o: /home/ossipc/projects/qt_projects/qt_live/LiveCoding/src/main.cpp
+CMakeFiles/QTLive.dir/src/main.cpp.o: /home/ossipc/projects/qt_projects/qt_live/src/main.cpp
 CMakeFiles/QTLive.dir/src/main.cpp.o: CMakeFiles/QTLive.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/QTLive.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTLive.dir/src/main.cpp.o -MF CMakeFiles/QTLive.dir/src/main.cpp.o.d -o CMakeFiles/QTLive.dir/src/main.cpp.o -c /home/ossipc/projects/qt_projects/qt_live/LiveCoding/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/QTLive.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTLive.dir/src/main.cpp.o -MF CMakeFiles/QTLive.dir/src/main.cpp.o.d -o CMakeFiles/QTLive.dir/src/main.cpp.o -c /home/ossipc/projects/qt_projects/qt_live/src/main.cpp
 
 CMakeFiles/QTLive.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/QTLive.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ossipc/projects/qt_projects/qt_live/LiveCoding/src/main.cpp > CMakeFiles/QTLive.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ossipc/projects/qt_projects/qt_live/src/main.cpp > CMakeFiles/QTLive.dir/src/main.cpp.i
 
 CMakeFiles/QTLive.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QTLive.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ossipc/projects/qt_projects/qt_live/LiveCoding/src/main.cpp -o CMakeFiles/QTLive.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ossipc/projects/qt_projects/qt_live/src/main.cpp -o CMakeFiles/QTLive.dir/src/main.cpp.s
+
+CMakeFiles/QTLive.dir/qtlive_qmltyperegistrations.cpp.o: CMakeFiles/QTLive.dir/flags.make
+CMakeFiles/QTLive.dir/qtlive_qmltyperegistrations.cpp.o: qtlive_qmltyperegistrations.cpp
+CMakeFiles/QTLive.dir/qtlive_qmltyperegistrations.cpp.o: CMakeFiles/QTLive.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/QTLive.dir/qtlive_qmltyperegistrations.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTLive.dir/qtlive_qmltyperegistrations.cpp.o -MF CMakeFiles/QTLive.dir/qtlive_qmltyperegistrations.cpp.o.d -o CMakeFiles/QTLive.dir/qtlive_qmltyperegistrations.cpp.o -c /home/ossipc/projects/qt_projects/qt_live/build/qtlive_qmltyperegistrations.cpp
+
+CMakeFiles/QTLive.dir/qtlive_qmltyperegistrations.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/QTLive.dir/qtlive_qmltyperegistrations.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ossipc/projects/qt_projects/qt_live/build/qtlive_qmltyperegistrations.cpp > CMakeFiles/QTLive.dir/qtlive_qmltyperegistrations.cpp.i
+
+CMakeFiles/QTLive.dir/qtlive_qmltyperegistrations.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QTLive.dir/qtlive_qmltyperegistrations.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ossipc/projects/qt_projects/qt_live/build/qtlive_qmltyperegistrations.cpp -o CMakeFiles/QTLive.dir/qtlive_qmltyperegistrations.cpp.s
+
+CMakeFiles/QTLive.dir/build/.qt/rcc/qrc_qmake_QMLLive.cpp.o: CMakeFiles/QTLive.dir/flags.make
+CMakeFiles/QTLive.dir/build/.qt/rcc/qrc_qmake_QMLLive.cpp.o: .qt/rcc/qrc_qmake_QMLLive.cpp
+CMakeFiles/QTLive.dir/build/.qt/rcc/qrc_qmake_QMLLive.cpp.o: CMakeFiles/QTLive.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/QTLive.dir/build/.qt/rcc/qrc_qmake_QMLLive.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTLive.dir/build/.qt/rcc/qrc_qmake_QMLLive.cpp.o -MF CMakeFiles/QTLive.dir/build/.qt/rcc/qrc_qmake_QMLLive.cpp.o.d -o CMakeFiles/QTLive.dir/build/.qt/rcc/qrc_qmake_QMLLive.cpp.o -c /home/ossipc/projects/qt_projects/qt_live/build/.qt/rcc/qrc_qmake_QMLLive.cpp
+
+CMakeFiles/QTLive.dir/build/.qt/rcc/qrc_qmake_QMLLive.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/QTLive.dir/build/.qt/rcc/qrc_qmake_QMLLive.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ossipc/projects/qt_projects/qt_live/build/.qt/rcc/qrc_qmake_QMLLive.cpp > CMakeFiles/QTLive.dir/build/.qt/rcc/qrc_qmake_QMLLive.cpp.i
+
+CMakeFiles/QTLive.dir/build/.qt/rcc/qrc_qmake_QMLLive.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QTLive.dir/build/.qt/rcc/qrc_qmake_QMLLive.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ossipc/projects/qt_projects/qt_live/build/.qt/rcc/qrc_qmake_QMLLive.cpp -o CMakeFiles/QTLive.dir/build/.qt/rcc/qrc_qmake_QMLLive.cpp.s
 
 CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.o: CMakeFiles/QTLive.dir/flags.make
 CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.o: QTLive_autogen/UVLADIE3JM/qrc_qml.cpp
 CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.o: CMakeFiles/QTLive.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.o -MF CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.o.d -o CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.o -c /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.o -MF CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.o.d -o CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.o -c /home/ossipc/projects/qt_projects/qt_live/build/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp
 
 CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp > CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ossipc/projects/qt_projects/qt_live/build/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp > CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.i
 
 CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp -o CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ossipc/projects/qt_projects/qt_live/build/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp -o CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.s
 
 # Object files for target QTLive
 QTLive_OBJECTS = \
 "CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/QTLive.dir/src/filewatcher.cpp.o" \
 "CMakeFiles/QTLive.dir/src/main.cpp.o" \
+"CMakeFiles/QTLive.dir/qtlive_qmltyperegistrations.cpp.o" \
+"CMakeFiles/QTLive.dir/build/.qt/rcc/qrc_qmake_QMLLive.cpp.o" \
 "CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.o"
 
 # External object files for target QTLive
@@ -155,6 +220,8 @@ QTLive_EXTERNAL_OBJECTS =
 QTLive: CMakeFiles/QTLive.dir/QTLive_autogen/mocs_compilation.cpp.o
 QTLive: CMakeFiles/QTLive.dir/src/filewatcher.cpp.o
 QTLive: CMakeFiles/QTLive.dir/src/main.cpp.o
+QTLive: CMakeFiles/QTLive.dir/qtlive_qmltyperegistrations.cpp.o
+QTLive: CMakeFiles/QTLive.dir/build/.qt/rcc/qrc_qmake_QMLLive.cpp.o
 QTLive: CMakeFiles/QTLive.dir/QTLive_autogen/UVLADIE3JM/qrc_qml.cpp.o
 QTLive: CMakeFiles/QTLive.dir/build.make
 QTLive: CMakeFiles/QTLive.dir/compiler_depend.ts
@@ -170,7 +237,7 @@ QTLive: /usr/lib64/libOpenGL.so
 QTLive: /usr/lib64/libQt6Network.so.6.9.3
 QTLive: /usr/lib64/libQt6Core.so.6.9.3
 QTLive: CMakeFiles/QTLive.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable QTLive"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable QTLive"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/QTLive.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -181,8 +248,13 @@ CMakeFiles/QTLive.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/QTLive.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/QTLive.dir/clean
 
+CMakeFiles/QTLive.dir/depend: .qt/rcc/qrc_qmake_QMLLive.cpp
+CMakeFiles/QTLive.dir/depend: QMLLive/QTLive.qmltypes
 CMakeFiles/QTLive.dir/depend: QTLive_autogen/UVLADIE3JM/qrc_qml.cpp
-CMakeFiles/QTLive.dir/depend: QTLive_autogen/timestamp
-	cd /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ossipc/projects/qt_projects/qt_live/LiveCoding /home/ossipc/projects/qt_projects/qt_live/LiveCoding /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build /home/ossipc/projects/qt_projects/qt_live/LiveCoding/build/CMakeFiles/QTLive.dir/DependInfo.cmake "--color=$(COLOR)"
+CMakeFiles/QTLive.dir/depend: meta_types/QTLive_json_file_list.txt
+CMakeFiles/QTLive.dir/depend: meta_types/qt6qtlive_release_metatypes.json
+CMakeFiles/QTLive.dir/depend: meta_types/qt6qtlive_release_metatypes.json.gen
+CMakeFiles/QTLive.dir/depend: qtlive_qmltyperegistrations.cpp
+	cd /home/ossipc/projects/qt_projects/qt_live/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ossipc/projects/qt_projects/qt_live /home/ossipc/projects/qt_projects/qt_live /home/ossipc/projects/qt_projects/qt_live/build /home/ossipc/projects/qt_projects/qt_live/build /home/ossipc/projects/qt_projects/qt_live/build/CMakeFiles/QTLive.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/QTLive.dir/depend
 

@@ -1,0 +1,5 @@
+module QMLLive
+typeinfo QTLive.qmltypes
+prefer :/QMLLive/
+depends QtQuick
+

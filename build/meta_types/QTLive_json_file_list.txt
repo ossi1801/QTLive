@@ -1,0 +1,1 @@
+/home/ossipc/projects/qt_projects/qt_live/build/QTLive_autogen/include/../UVLADIE3JM/moc_filewatcher.cpp.json

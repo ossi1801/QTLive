@@ -1,0 +1,44 @@
+{
+    "classes": [
+        {
+            "className": "FileWatcher",
+            "lineNumber": 12,
+            "object": true,
+            "qualifiedClassName": "FileWatcher",
+            "slots": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "path",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "directoryChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "path",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 1,
+                    "name": "fileChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "filewatcher.h",
+    "outputRevision": 69
+}
